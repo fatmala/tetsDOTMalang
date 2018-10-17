@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DOT Test</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Test Web Frontend DOT</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Mencari Perbedaaan Nilai Array</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+    <p>Nilai perbedaan maximum dari array [<b id="tampil"></b>]</p>
+    <b id="hasil"></b>
+</div>
+
+</body>
+<script type="text/javascript">
+  var numberCollection=[4,5,1,7,9];
+  var max, min;
+  for(var i =0; i < numberCollection.length;i++){
+    if (i==0){
+      min=numberCollection[i];
+      max=numberCollection[i];
+    }else{
+      if (min > numberCollection[i]){
+        min = numberCollection[i];
+      }else{
+        min=min;
+      }
+      if (max < numberCollection[i]){
+        max = numberCollection[i];
+      }else{
+        max=max;
+      }
+    }
+  }
+  var maxDiff=max - min;
+  document.getElementById('hasil').innerHTML = maxDiff;
+  var data = numberCollection;
+  document.getElementById('tampil').innerHTML = data;
+</script>
+</html>
